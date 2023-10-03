@@ -1,0 +1,20 @@
+:root{
+    /* --font-family:font-family: "Asap", sans-serif; */
+    /* font-family: "Jost", sans-serif; */
+    /* font-family: "Montserrat", sans-serif; */
+    /* font-family: "Poppins", sans-serif;  */
+
+    --bg-color:#EDF1F6;
+    --num-color: #545F78;
+    --name-color: #32324D;
+    --year-color:#A0CDF3;
+    --border-color:#E1E5EE;
+    --rent-btn-color:#4999ED;
+
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}

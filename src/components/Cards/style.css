@@ -1,0 +1,157 @@
+.car-cards {
+  display: flex;
+  border: 2px solid white;
+  border-radius: 20px;
+  font-family: var(--font-family);
+}
+
+/* .cards > img {
+    display: flex;
+    margin: auto;
+  width: 80%;
+  border-radius: 10px;
+} */
+
+.car-cards_info {
+  padding: 10px;
+  font-family: var(--font-family);
+}
+
+.car-info > h4 {
+  border: 3px dashed var(--year-color);
+  padding: 10px;
+  border-radius: 15px;
+  font-family: var(--font-family);
+  margin: 1rem;
+}
+
+.car-cards_info > img {
+  border-radius: 20px;
+  width: 21rem;
+  align-items: center;
+  display: flex;
+}
+
+.car-cards_info_name {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  font-family: var(--font-family);
+  color: var(--name-color);
+}
+
+.car-cards_info_name > h3 {
+  font-family: var(--font-family);
+  color: var(--name-color);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.car-cards_info_year {
+  color: var(--name-color);
+}
+
+.car-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  align-items: center;
+  font-family: var(--font-family);
+}
+
+.car-cards_sub-info {
+
+  border-bottom: 1px solid var(--border-color);
+  margin: 1rem;
+}
+
+.car-cards_sub-info_upper {
+  display: flex;
+}
+
+.car-cards_sub-info_upper > p {
+  padding: 5px;
+  margin: 0 4.5rem 0 0;
+  align-items: center;
+  display: flex;
+  gap: 5px;
+  font-family: var(--font-family);
+
+}
+
+.car-cards_sub-info_lower {
+  display: flex;
+}
+
+.car-cards_sub-info_lower > p {
+  padding: 5px;
+  margin: 0 3.5rem 0 0;
+  align-items: center;
+  display: flex;
+  gap: 5px;
+  font-family: var(--font-family);
+}
+
+.car-info > h3 {
+  width: 75%;
+}
+
+.car-cards_sub-info_Buy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+}
+
+.car-cards_sub-info_Buy-Now {
+  padding: 0.5rem;
+}
+
+.favorite {
+  border: none;
+}
+
+.favorite > button {
+  border: none;
+  background-color: none;
+}
+
+.favorite-img {
+width: 25px;
+background-color: none;
+color: none;
+height: 25px;
+}
+
+.car-cards_sub-info_Buy-Now > button {
+  margin: 0 0.5rem;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.car-cards_sub-info_Buy-price > h3 {
+  display: flex;
+  align-items: center;
+  color: var(--name-color)
+}
+
+.car-cards_sub-info_Buy-Now {
+  display: flex;
+}
+
+.car-cards_sub-info_rent-btn{
+  padding: 0.5rem;
+  background-color: var(--rent-btn-color);
+  color: white;
+  border-radius: 10px;
+  border: 1px solid var(--rent-btn-color);
+
+}
+
+.car-cards_sub-info_rent-btn > button{
+  padding: 0.5rem;
+  border: 1px solid var(--rent-btn-color);
+
+}
