@@ -28,7 +28,7 @@ function Home() {
 
           </input>
           <AiOutlineSearch className="search-img" onClick={()=>{
-            const resData = filterData(searchText,filteredCarCards);
+            const resData = filterData(searchText,resultData);
             console.log(resData);
             setFilteredCarCards(resData);
 
@@ -36,11 +36,13 @@ function Home() {
         <h5>Relevance </h5><AiOutlineDown className="search_scroll-down_img"></AiOutlineDown>
         <h5>All brands </h5><AiOutlineDown className="search_scroll-down_img"></AiOutlineDown>
       </div>
+
+      
       {/* Cards List */}
       <div id="cars-list">
         {filteredCarCards.map((car) => {
         return (
-            <div className="cards">
+            <div className="cards"z>
             <Cards filteredCarCards={...car} />
             </div>
         );
