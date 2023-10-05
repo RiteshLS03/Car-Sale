@@ -3,7 +3,10 @@ import { resultData } from "../../config";
 import "./style.css";
 import {AiOutlineSearch,AiOutlineDown} from "react-icons/ai"
 import Cards from "../Cards/Cards";
+import ReactPaginate from "react-paginate";
 
+
+const items = resultData;
 
 
 function Home() {
@@ -16,7 +19,27 @@ function Home() {
     }
 
     const[searchText,setSearchText] = useState("");
-    const[filteredCarCards,setFilteredCarCards] = useState(resultData)
+    const[filteredCarCards,setFilteredCarCards] = useState(items)
+
+    // Pagination code
+
+
+    const [itemOffSet, setItemOffset] = useState(0);
+
+    const itemsPerPage = 6;
+    const endOffset = itemOffSet + itemsPerPage;
+    const currentItems = items.slice(itemOffSet, endOffset);
+    const pageCount = Math.ceil(items.length/itemsPerPage)
+
+    // function of handle page change
+
+    const handlePageClick = (event) => {
+      const newOffset = (event.selected * itemsPerPage) % items.length;
+      setItemOffset(newOffset)
+    }
+
+   
+
 
   return (
     <div id="main">
@@ -39,17 +62,39 @@ function Home() {
 
       
       {/* Cards List */}
-      <div id="cars-list">
-        {filteredCarCards.map((car) => {
-        return (
-            <div className="cards"z>
+      <div id="cars-list">      
+      </div>
+      {filteredCarCards &&
+        filteredCarCards.map((car)=>{
+          <div>
             <Cards filteredCarCards={...car} />
-            </div>
-        );
-      })}
+          </div>
+        })
+      }
+      <div >     
+        <Items currentItems={currentItems} itemsPerPage={itemsPerPage}/>
+         <ReactPaginate 
+         className={'car-sale_pagination'}
+         previousLabel={'< Pre'}
+         breakLabel="..."
+         nextLabel={'Next >'}
+         pageCount={pageCount}
+         marginPagesDisplayed={"2"}
+         onPageChange={handlePageClick}
+         />
       </div>
     </div>
   );
 };
+
+export  function Items({currentItems}){
+  currentItems && currentItems.map((item) => {
+    <>
+       <div className="cards">
+       <Cards filteredCarCards={...item} />
+       </div>
+       </>
+ }
+)}
 
 export default Home;
